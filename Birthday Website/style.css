@@ -1,0 +1,113 @@
+:root{
+  --bg:#FFF5F7;
+  --primary:#F23478;
+  --deep:#B31663;
+  --text:#3a2a2e;
+  --muted:#7a6066;
+  --card:#ffffff;
+  --shadow:0 12px 40px rgba(179,22,99,0.15);
+  --radius:20px;
+  --t:0.4s;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:'Poppins',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  min-height:100svh;
+}
+.bg-particles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.bg-particles span{position:absolute;border-radius:50%;opacity:0.5;animation:float 8s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+.stage{min-height:100svh;display:flex;align-items:center;justify-content:center;position:relative;z-index:1;padding:24px}
+.stage.hidden{display:none}
+.title{font-family:'Dancing Script',cursive;font-size:clamp(2.2rem,6vw,4rem);color:var(--primary);text-align:center;letter-spacing:1px}
+.heading{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4.5vw,3rem);color:var(--deep);text-align:center;margin-bottom:8px}
+.script{font-family:'Dancing Script',cursive}
+.subtitle{color:var(--muted);text-align:center;font-size:1rem;margin-bottom:6px}
+.italic{font-style:italic;color:var(--muted);text-align:center;margin-bottom:24px}
+.msg{max-width:520px;text-align:center;color:var(--muted);margin:18px auto;font-size:1.05rem;line-height:1.6}
+.btn{border:none;cursor:pointer;border-radius:999px;padding:12px 28px;font-family:'Poppins',sans-serif;font-weight:500;font-size:1rem;transition:transform .2s,box-shadow .2s}
+.btn-yes{background:linear-gradient(135deg,#f23478,#b31663);color:#fff;box-shadow:0 6px 20px rgba(242,52,120,.35)}
+.btn-yes:hover{transform:translateY(-2px)}
+.btn-no{background:#fff;color:var(--deep);box-shadow:var(--shadow);position:relative}
+.btn-continue{background:linear-gradient(135deg,#f23478,#b31663);color:#fff;margin-top:20px;box-shadow:0 6px 20px rgba(242,52,120,.35)}
+.btn-back{background:transparent;color:var(--muted);margin-top:12px;font-size:.9rem}
+.btn-replay{background:linear-gradient(135deg,#f23478,#b31663);color:#fff;margin-top:24px}
+.btn-row{display:flex;gap:16px;justify-content:center;margin-top:24px;flex-wrap:wrap;position:relative;min-height:60px}
+.bears{max-width:360px;width:100%;height:auto}
+.bears-wrap{text-align:center;margin:16px 0}
+.fade-in{animation:fadeIn 1s ease both}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.welcome{text-align:center}
+
+/* Stage2 balloons */
+.balloon-area{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;margin:30px 0;min-height:200px}
+.balloon{width:90px;height:110px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;position:relative;cursor:pointer;animation:balloonFloat 3s ease-in-out infinite;box-shadow:inset -10px -10px 20px rgba(0,0,0,.08),0 8px 20px rgba(0,0,0,.12);transition:transform .2s}
+.balloon::after{content:'';position:absolute;bottom:-30px;left:50%;width:1px;height:30px;background:#999;transform:translateX(-50%)}
+.b-blue{background:radial-gradient(circle at 35% 30%,#bfe7ff,#6ec6ff)}
+.b-pink{background:radial-gradient(circle at 35% 30%,#ffcce0,#ff7eb3)}
+.b-mint{background:radial-gradient(circle at 35% 30%,#c8f7e3,#6fe0b3)}
+.b-lav{background:radial-gradient(circle at 35% 30%,#e6d5ff,#b388ff)}
+.balloon.pop{animation:pop .35s ease forwards}
+@keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.3)}100%{transform:scale(0);opacity:0}}
+@keyframes balloonFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.balloon-msg{min-height:40px;text-align:center;color:var(--deep);font-size:1.1rem;opacity:0;transition:opacity .4s,transform .4s;transform:translateY(10px)}
+.balloon-msg.show{opacity:1;transform:none}
+.final-balloon-msg{font-size:1.6rem;color:var(--primary);font-family:'Dancing Script',cursive;text-align:center;margin-top:10px;animation:fadeIn 1s ease}
+.hidden{display:none !important}
+
+/* Stage3 */
+.wish-stage{text-align:center}
+.cake-wrap{margin:20px auto;cursor:pointer;display:inline-block}
+.cake{max-width:280px;width:100%;height:auto;filter:drop-shadow(0 10px 20px rgba(0,0,0,.1))}
+.wish-text{margin-top:16px;color:var(--deep);font-size:1.1rem;animation:fadeIn .8s ease}
+
+/* Stage4 gallery */
+.gallery-stage{text-align:center;width:100%;max-width:720px}
+.gallery{display:flex;align-items:center;gap:12px;margin:20px 0}
+.g-frame{position:relative;flex:1;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#fff}
+.g-frame img{width:100%;height:100%;object-fit:cover;transition:opacity .4s,transform .4s}
+.g-caption{position:absolute;bottom:0;left:0;right:0;padding:12px;background:linear-gradient(transparent,rgba(0,0,0,.5));color:#fff;font-size:.95rem}
+.g-nav{background:#fff;border:none;width:40px;height:40px;border-radius:50%;box-shadow:var(--shadow);cursor:pointer;font-size:1.6rem;color:var(--deep)}
+.g-counter{color:var(--muted);margin-bottom:6px}
+.g-dots{display:flex;gap:6px;justify-content:center;margin-bottom:12px}
+.g-dots span{width:8px;height:8px;border-radius:50%;background:#ddd;cursor:pointer}
+.g-dots span.active{background:var(--primary)}
+
+/* Stage5 envelope */
+.letter-stage{text-align:center;width:100%;max-width:640px}
+.envelope-wrap{margin:20px auto;cursor:pointer;display:inline-block}
+.envelope{width:260px;height:170px;position:relative;margin:0 auto;animation:balloonFloat 4s ease-in-out infinite;perspective:800px}
+.env-body{position:absolute;inset:0;background:linear-gradient(135deg,#ffd4e6,#f7a8c8);border-radius:8px;box-shadow:var(--shadow)}
+.env-flap{position:absolute;top:0;left:0;right:0;height:50%;background:linear-gradient(135deg,#f23478,#b31663);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top center;transition:transform .7s ease;z-index:3}
+.env-flap.open{transform:rotateX(-160deg)}
+.env-seal{position:absolute;top:40%;left:50%;transform:translate(-50%,-50%);font-size:1.6rem;z-index:4;transition:opacity .4s,transform .4s}
+.env-seal.hide{opacity:0;transform:translate(-50%,-50%) scale(0)}
+.env-hint{margin-top:12px;color:var(--muted)}
+.letter-card{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);margin-top:20px;text-align:left;max-height:60vh;overflow-y:auto;animation:fadeIn .8s ease}
+.letter-content p{margin-bottom:14px;line-height:1.7;color:var(--text)}
+.letter-content .greet{font-family:'Dancing Script',cursive;font-size:1.5rem;color:var(--primary)}
+
+/* Stage6 */
+.final-stage{text-align:center;max-width:600px}
+.gift{max-width:220px;width:100%;height:auto;margin-bottom:16px;animation:balloonFloat 4s ease-in-out infinite}
+.final-msg{font-size:1.1rem;color:var(--text);margin:12px 0;line-height:1.7}
+.final-sub{color:var(--muted);font-size:1rem}
+
+/* music btn */
+.music-btn{position:fixed;top:16px;right:16px;z-index:5;background:#fff;border:none;width:40px;height:40px;border-radius:50%;box-shadow:var(--shadow);cursor:pointer;font-size:1.2rem;color:var(--deep)}
+
+/* particles confetti */
+.confetti{position:fixed;pointer-events:none;z-index:999}
+@media (max-width:600px){
+  .envelope{width:220px;height:145px}
+  .letter-card{padding:18px;max-height:55vh}
+  .balloon{width:75px;height:92px}
+  .g-nav{width:34px;height:34px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+}

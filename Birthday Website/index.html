@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday, Soumitaa 💗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-particles" aria-hidden="true"></div>
+
+  <button class="music-btn" id="musicBtn" aria-label="Toggle music">♪</button>
+  <audio id="bgMusic" src="assets/audio/audiomass-output.mp3" loop preload="auto" autoplay></audio>
+
+  <!-- Stage 1 -->
+  <section class="stage" id="stage-1">
+    <div class="welcome">
+      <h1 class="title script fade-in">Happy Birthday, Soumitaa 💗</h1>
+      <div class="bears-wrap fade-in">
+        <img src="assets/images/first_page.jpg" alt="Birthday bears and cake" class="bears" />
+      </div>
+      <p class="msg fade-in">I created a little something just for you, to celebrate how beautiful your life is. Ready to see it?</p>
+      <div class="btn-row fade-in">
+        <button class="btn btn-yes" id="yesBtn">YES 💗</button>
+        <button class="btn btn-no" id="noBtn">NO</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stage 2 -->
+  <section class="stage hidden" id="stage-2">
+    <div class="balloons-stage">
+      <p class="subtitle">A gentle reminder floats just for you</p>
+      <h2 class="heading">Pop the Balloons</h2>
+      <p class="italic">and reveal a message from my heart...</p>
+      <div class="balloon-area" id="balloonArea">
+        <div class="balloon b-blue" data-msg="You make life beautiful 💗"></div>
+        <div class="balloon b-pink" data-msg="Your smile makes ordinary days special ✨"></div>
+        <div class="balloon b-mint" data-msg="You deserve all the happiness in the world 🌷"></div>
+        <div class="balloon b-lav" data-msg="Never forget how special you are 💕"></div>
+      </div>
+      <div class="balloon-msg" id="balloonMsg"></div>
+      <div class="final-balloon-msg hidden" id="finalBalloonMsg">You make life beautiful 💗</div>
+      <button class="btn btn-continue hidden" id="continue2">Continue</button>
+      <button class="btn btn-back" id="back2">← Back</button>
+    </div>
+  </section>
+
+  <!-- Stage 3 -->
+  <section class="stage hidden" id="stage-3">
+    <div class="wish-stage">
+      <h2 class="heading script">Make a wish, Soumitaa 💕</h2>
+      <p class="subtitle">Close your eyes and hold a special wish in your heart.</p>
+      <div class="cake-wrap" id="cakeWrap">
+        <img src="assets/images/bcake.png" alt="Birthday cake" class="cake" />
+      </div>
+      <p class="wish-text hidden" id="wishText">May all your little wishes find their way to you ✨</p>
+      <button class="btn btn-continue hidden" id="continue3">Continue</button>
+      <button class="btn btn-back" id="back3">← Back</button>
+    </div>
+  </section>
+
+  <!-- Stage 4 -->
+  <section class="stage hidden" id="stage-4">
+    <div class="gallery-stage">
+      <h2 class="heading">A little gallery of you 📸</h2>
+      <p class="subtitle">Some moments deserve to be kept forever.</p>
+      <div class="gallery">
+        <button class="g-nav g-prev" id="gPrev" aria-label="Previous">‹</button>
+        <div class="g-frame" id="gFrame">
+          <img id="gImg" src="" alt="Photo" />
+          <div class="g-caption" id="gCaption"></div>
+        </div>
+        <button class="g-nav g-next" id="gNext" aria-label="Next">›</button>
+      </div>
+      <div class="g-counter" id="gCounter"></div>
+      <div class="g-dots" id="gDots"></div>
+      <button class="btn btn-continue" id="continue4">Continue</button>
+      <button class="btn btn-back" id="back4">← Back</button>
+    </div>
+  </section>
+
+  <!-- Stage 5 -->
+  <section class="stage hidden" id="stage-5">
+    <div class="letter-stage">
+      <h2 class="heading">A letter carrying all my thoughts...</h2>
+      <div class="envelope-wrap" id="envelopeWrap">
+        <div class="envelope" id="envelope">
+          <div class="env-body"></div>
+          <div class="env-flap"></div>
+          <div class="env-seal">💗</div>
+        </div>
+        <p class="env-hint">Tap to open 💌</p>
+      </div>
+      <div class="letter-card hidden" id="letterCard">
+        <div class="letter-content" id="letterContent"></div>
+      </div>
+      <button class="btn btn-continue hidden" id="continue5">One Last Thing 💝</button>
+      <button class="btn btn-back" id="back5">← Back</button>
+    </div>
+  </section>
+
+  <!-- Stage 6 -->
+  <section class="stage hidden" id="stage-6">
+    <div class="final-stage">
+      <img src="assets/images/giftbox.png" alt="Gift" class="gift" />
+      <h2 class="heading script">Lots of love for you 💗</h2>
+      <p class="final-msg">Lots of love and happiness for you. Once again, Happy Birthday, Soumitaa! I hope this little surprise makes you smile. 💕</p>
+      <p class="final-sub">You deserve all the beautiful things life has to offer. Keep smiling, birthday girl! 🌷</p>
+      <button class="btn btn-replay" id="replayBtn">Replay the Surprise ↻</button>
+    </div>
+  </section>
+
+<script src="script.js"></script>
+</body>
+</html>

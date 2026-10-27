@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360" width="300" height="360">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe6f0"/>
+      <stop offset="100%" stop-color="#ffd4e6"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f23478"/>
+      <stop offset="100%" stop-color="#b31663"/>
+    </linearGradient>
+  </defs>
+  <!-- shadow -->
+  <ellipse cx="150" cy="330" rx="110" ry="16" fill="#000" opacity="0.12"/>
+  <!-- bottom tier -->
+  <rect x="50" y="230" width="200" height="80" rx="16" fill="url(#g1)"/>
+  <rect x="50" y="230" width="200" height="18" rx="9" fill="url(#g2)"/>
+  <!-- middle tier -->
+  <rect x="75" y="160" width="150" height="70" rx="14" fill="url(#g1)"/>
+  <rect x="75" y="160" width="150" height="16" rx="8" fill="#d8a7ff"/>
+  <!-- top tier -->
+  <rect x="105" y="100" width="90" height="60" rx="12" fill="url(#g1)"/>
+  <rect x="105" y="100" width="90" height="14" rx="7" fill="url(#g2)"/>
+  <!-- decorations hearts -->
+  <g fill="#f23478" opacity="0.8">
+    <path d="M 90 260 c -4-8 -14-5 -14 4 0 9 14 16 14 16 s 14-7 14-16 c 0-9 -10-12 -14-4z" transform="scale(0.7) translate(0,0)"/>
+    <path d="M 150 260 c -4-8 -14-5 -14 4 0 9 14 16 14 16 s 14-7 14-16 c 0-9 -10-12 -14-4z" transform="scale(0.7) translate(70,0)"/>
+    <path d="M 210 260 c -4-8 -14-5 -14 4 0 9 14 16 14 16 s 14-7 14-16 c 0-9 -10-12 -14-4z" transform="scale(0.7) translate(140,0)"/>
+  </g>
+  <!-- candles -->
+  <rect x="120" y="70" width="6" height="32" fill="#ffd700"/>
+  <rect x="147" y="64" width="6" height="38" fill="#f23478"/>
+  <rect x="174" y="70" width="6" height="32" fill="#b31663"/>
+  <ellipse cx="123" cy="66" rx="5" ry="8" fill="#ff9f43" class="flame"/>
+  <ellipse cx="150" cy="60" rx="5" ry="8" fill="#ff9f43" class="flame"/>
+  <ellipse cx="177" cy="66" rx="5" ry="8" fill="#ff9f43" class="flame"/>
+  <!-- sprinkles -->
+  <g fill="#fff" opacity="0.9">
+    <circle cx="120" cy="120" r="3"/>
+    <circle cx="160" cy="115" r="3"/>
+    <circle cx="190" cy="125" r="3"/>
+    <circle cx="95" cy="180" r="3"/>
+    <circle cx="130" cy="190" r="3"/>
+    <circle cx="170" cy="175" r="3"/>
+    <circle cx="200" cy="185" r="3"/>
+  </g>
+</svg>

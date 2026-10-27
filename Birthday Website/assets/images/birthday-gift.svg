@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <defs>
+    <linearGradient id="box" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f23478"/>
+      <stop offset="100%" stop-color="#b31663"/>
+    </linearGradient>
+  </defs>
+  <rect x="40" y="90" width="160" height="120" rx="12" fill="url(#box)"/>
+  <rect x="30" y="70" width="180" height="30" rx="8" fill="#ffd700"/>
+  <rect x="110" y="70" width="20" height="140" fill="#fff" opacity="0.9"/>
+  <rect x="40" y="140" width="160" height="16" fill="#fff" opacity="0.9"/>
+  <path d="M120 70 C 90 30, 70 40, 95 70 Z" fill="#fff" opacity="0.9"/>
+  <path d="M120 70 C 150 30, 170 40, 145 70 Z" fill="#fff" opacity="0.9"/>
+  <circle cx="120" cy="60" r="12" fill="#fff"/>
+  <!-- hearts -->
+  <g fill="#fff" opacity="0.6">
+    <path d="M 60 130 c -3-6 -11-4 -11 3 0 7 11 12 11 12 s 11-5 11-12 c 0-7 -8-9 -11-3z" transform="scale(0.6) translate(20,0)"/>
+    <path d="M 150 160 c -3-6 -11-4 -11 3 0 7 11 12 11 12 s 11-5 11-12 c 0-7 -8-9 -11-3z" transform="scale(0.6) translate(120,40)"/>
+  </g>
+</svg>
